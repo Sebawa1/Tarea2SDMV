@@ -11,7 +11,8 @@ import (
 	"syscall"
 	"time"
 
-	pb "github.com/sd2025/restaurante/proto"
+	pb "mv1/proto"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

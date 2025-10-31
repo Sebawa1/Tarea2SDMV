@@ -8,8 +8,9 @@ import (
 	"net"
 	"time"
 
+	pb "mv2/proto"
+
 	amqp "github.com/rabbitmq/amqp091-go"
-	pb "github.com/sd2025/restaurante/proto"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

@@ -7,8 +7,9 @@ import (
 	"net"
 	"time"
 
+	pb "mv1/proto"
+
 	amqp "github.com/rabbitmq/amqp091-go"
-	pb "github.com/sd2025/restaurante/proto"
 	"google.golang.org/grpc"
 )
 
