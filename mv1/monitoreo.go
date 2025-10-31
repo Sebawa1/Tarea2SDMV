@@ -81,7 +81,7 @@ func (s *server) consumirRabbitMQ() {
 }
 
 func main() {
-	rabbitURI := fmt.Sprintf("amqp://guest:guest@%s/", RABBITMQ_HOST)
+	rabbitURI := fmt.Sprintf("amqp://admin:admin123@%s/", RABBITMQ_HOST)
 	log.Printf("Conectando a RabbitMQ en %s...", RABBITMQ_HOST)
 
 	conn, err := amqp.Dial(rabbitURI)

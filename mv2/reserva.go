@@ -218,7 +218,7 @@ func main() {
 	}
 	defer client.Disconnect(ctx)
 
-	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
+	conn, err := amqp.Dial("amqp://admin:admin123@localhost:5672/")
 	if err != nil {
 		log.Fatal(err)
 	}
