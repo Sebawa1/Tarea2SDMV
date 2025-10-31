@@ -8,8 +8,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'proto'))
 import reservas_pb2
 import reservas_pb2_grpc
 
-MONGODB_URI = "mongodb://localhost:27017"
-
+MONGODB_URI = "mongodb://10.10.31.17:27017"
 
 class RegistroService(reservas_pb2_grpc.RegistroServiceServicer):
     
@@ -58,7 +57,6 @@ class RegistroService(reservas_pb2_grpc.RegistroServiceServicer):
                 mensaje=f"Error al registrar reserva: {str(e)}"
             )
 
-
 def serve():
     print(f"Conectando a MongoDB en {MONGODB_URI}...")
     try:
@@ -84,7 +82,5 @@ def serve():
         server.stop(0)
         client.close()
 
-
 if __name__ == '__main__':
     serve()
-

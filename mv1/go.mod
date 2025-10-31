@@ -4,9 +4,9 @@ go 1.25
 
 require (
 	github.com/rabbitmq/amqp091-go v1.9.0
+	github.com/sd2025/restaurante/proto v0.0.0-00010101000000-000000000000
 	go.mongodb.org/mongo-driver v1.13.1
 	google.golang.org/grpc v1.60.1
-	google.golang.org/protobuf v1.32.0
 )
 
 require (
@@ -24,6 +24,7 @@ require (
 	golang.org/x/sys v0.16.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240116215550-a9fa1716bcac // indirect
+	google.golang.org/protobuf v1.32.0 // indirect
 )
 
 replace github.com/sd2025/restaurante/proto => ./proto

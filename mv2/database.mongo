@@ -1,13 +1,8 @@
-// Script para inicializar la base de datos MongoDB
-// Ejecutar en MongoDB shell: mongosh < database.mongo
-
 use restaurante;
 
-// Eliminar colecciones existentes
 db.mesas.drop();
 db.reservas.drop();
 
-// Crear colección de mesas con 10 mesas
 db.mesas.insertMany([
   {
     "table_id": "mesa-01",

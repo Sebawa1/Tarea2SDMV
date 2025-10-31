@@ -4,22 +4,18 @@ package reservas;
 
 option go_package = "./proto";
 
-// Servicio de Reservas - Cliente envía solicitudes
 service ReservaService {
   rpc EnviarReservas(ReservasRequest) returns (ReservasResponse);
 }
 
-// Servicio de Registro - Reservas envía confirmaciones
 service RegistroService {
   rpc RegistrarReserva(ReservaInfo) returns (RegistroResponse);
 }
 
-// Servicio de Monitoreo - Cliente recibe notificaciones
 service MonitoreoService {
   rpc RecibirNotificaciones(stream NotificacionRequest) returns (stream NotificacionResponse);
 }
 
-// Mensajes
 message Solicitud {
   string name = 1;
   string phone = 2;
@@ -59,5 +55,5 @@ message NotificacionRequest {
 
 message NotificacionResponse {
   string mensaje = 1;
-  string tipo = 2; // "exitosa", "modificada", "fallida"
+  string tipo = 2;
 }

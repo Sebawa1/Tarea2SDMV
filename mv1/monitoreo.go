@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	RABBITMQ_HOST = "localhost:5672"
+	RABBITMQ_HOST = "10.10.31.17:5672"
 )
 
 type server struct {
