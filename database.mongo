@@ -1,0 +1,75 @@
+// Script para inicializar la base de datos MongoDB
+// Ejecutar en MongoDB shell: mongosh < database.mongo
+
+use restaurante;
+
+// Eliminar colecciones existentes
+db.mesas.drop();
+db.reservas.drop();
+
+// Crear colección de mesas con 10 mesas
+db.mesas.insertMany([
+  {
+    "table_id": "mesa-01",
+    "capacity": 12,
+    "status": "Disponible",
+    "tipo": ["fumadores"]
+  },
+  {
+    "table_id": "mesa-02",
+    "capacity": 8,
+    "status": "Disponible",
+    "tipo": ["aire libre"]
+  },
+  {
+    "table_id": "mesa-03",
+    "capacity": 4,
+    "status": "Disponible",
+    "tipo": ["fumadores"]
+  },
+  {
+    "table_id": "mesa-04",
+    "capacity": 8,
+    "status": "Disponible",
+    "tipo": ["interior"]
+  },
+  {
+    "table_id": "mesa-05",
+    "capacity": 4,
+    "status": "Disponible",
+    "tipo": ["no fumadores"]
+  },
+  {
+    "table_id": "mesa-06",
+    "capacity": 12,
+    "status": "Disponible",
+    "tipo": ["interior"]
+  },
+  {
+    "table_id": "mesa-07",
+    "capacity": 4,
+    "status": "Disponible",
+    "tipo": ["aire libre"]
+  },
+  {
+    "table_id": "mesa-08",
+    "capacity": 8,
+    "status": "Disponible",
+    "tipo": ["no fumadores"]
+  },
+  {
+    "table_id": "mesa-09",
+    "capacity": 8,
+    "status": "Disponible",
+    "tipo": ["exterior"]
+  },
+  {
+    "table_id": "mesa-10",
+    "capacity": 12,
+    "status": "Disponible",
+    "tipo": ["exterior"]
+  }
+]);
+
+print("Base de datos inicializada correctamente");
+print("Mesas creadas: " + db.mesas.countDocuments());

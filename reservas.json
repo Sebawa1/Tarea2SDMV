@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Albert Einstein",
+    "phone": "+56978985001",
+    "party_size": 8,
+    "preferences": "interior"
+  },
+  {
+    "name": "Gumball Watterson",
+    "phone": "+56978985002",
+    "party_size": 4,
+    "preferences": "fumadores"
+  },
+  {
+    "name": "Pedro Picapiedra",
+    "phone": "+56978985003",
+    "party_size": 4,
+    "preferences": "interior"
+  },
+  {
+    "name": "Juan Perez",
+    "phone": "+56978985004",
+    "party_size": 8,
+    "preferences": "fumadores"
+  },
+  {
+    "name": "Homero Simpson",
+    "phone": "+56978985005",
+    "party_size": 4,
+    "preferences": "no fumadores"
+  },
+  {
+    "name": "Timmy Turner",
+    "phone": "+56978985006",
+    "party_size": 2,
+    "preferences": "interior"
+  },
+  {
+    "name": "Coraline Jones",
+    "phone": "+56988704536",
+    "party_size": 8,
+    "preferences": "interior"
+  }
+]

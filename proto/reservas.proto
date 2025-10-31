@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package reservas;
+
+option go_package = "./proto";
+
+// Servicio de Reservas - Cliente envía solicitudes
+service ReservaService {
+  rpc EnviarReservas(ReservasRequest) returns (ReservasResponse);
+}
+
+// Servicio de Registro - Reservas envía confirmaciones
+service RegistroService {
+  rpc RegistrarReserva(ReservaInfo) returns (RegistroResponse);
+}
+
+// Servicio de Monitoreo - Cliente recibe notificaciones
+service MonitoreoService {
+  rpc RecibirNotificaciones(stream NotificacionRequest) returns (stream NotificacionResponse);
+}
+
+// Mensajes
+message Solicitud {
+  string name = 1;
+  string phone = 2;
+  int32 party_size = 3;
+  string preferences = 4;
+}
+
+message ReservasRequest {
+  repeated Solicitud solicitudes = 1;
+}
+
+message ReservasResponse {
+  string mensaje = 1;
+  bool success = 2;
+}
+
+message ReservaInfo {
+  string reservation_id = 1;
+  string name = 2;
+  string phone = 3;
+  int32 party_size = 4;
+  string preferences = 5;
+  repeated string table_id = 6;
+  string status = 7;
+  string mesa_capacidad = 8;
+  string mesa_tipo = 9;
+}
+
+message RegistroResponse {
+  bool success = 1;
+  string mensaje = 2;
+}
+
+message NotificacionRequest {
+  string client_id = 1;
+}
+
+message NotificacionResponse {
+  string mensaje = 1;
+  string tipo = 2; // "exitosa", "modificada", "fallida"
+}
